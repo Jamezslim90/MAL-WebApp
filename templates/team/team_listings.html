@@ -1,0 +1,126 @@
+{% extends '../base.html' %}
+{% load static %}
+
+{% block title %}Home{% endblock title %}
+
+
+{% block content %} 
+
+
+        <!-- content -->
+        <div id="content">
+
+            <!-- banner -->
+            <section class="mil-banner mil-banner-sm">
+                <img src="{% static 'img/covers/bristol-hotel-kaduna6.jpg' %}" class="mil-bg-img mil-scale" data-value-1=".4" data-value-2="1.4" alt="image" style="object-position: top">
+                <div class="mil-overlay"></div>
+                <div class="container">
+                    <div class="mil-background-grid mil-top-space"></div>
+                    <div class="mil-banner-content mil-center">
+                        <div class="mil-mb-90">
+                            <h1 class="mil-light mil-upper mil-mb-30">Management</h1>
+                            <ul class="mil-breadcrumbs mil-center">
+                                <li><a href="home-1.html">Home</a></li>
+                                <li><a href="about.html">Team</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- banner end -->
+
+            <!-- team -->
+            <section>
+                <div class="container mil-p-120-60">
+                    <div class="mil-background-grid mil-softened"></div>
+                    <div class="mil-center">
+                        <p class="mil-text-lg mil-up mil-mb-90">TEAM to us means Together Everyone Achieves More. The backbone of our success lies in the passion and expertise of our Professionals combined with the skills and dedication of our Workforce. 
+</p>
+                    </div>
+                    <!-- filter -->
+                    <div class="mil-filter mil-up mil-mb-90">
+                        <div class="mil-filter-links">
+                            <a href="#" class="mil-current">All</a>
+                            <a href="#" class="">Executive</a>
+                            <a href="#" class="">Management</a>
+                            <a href="#" class="">Managers</a>
+                            <a href="#" class="">Field Officers</a>
+                        </div>
+                    </div>
+                    <!-- filter end -->
+                    <div class="row">
+                        {% for team in team_list %}
+                        <div class="col-sm-6 col-lg-3 mil-up">
+                            <a href="{% url 'team_detail' team.pk%}" class="mil-team-member">
+                                <div class="mil-avatar mil-mb-30">
+                                    <img src="{{team.picture.url}}" alt="Team Member">
+                                </div>
+                                <h6 class="mil-upper mil-mb-10">{{team.name}}</h6>
+                                <p>{{team.title}}</p>
+                                <p class="mil-dark-soft">{{team.designation}}</p>
+                            </a>
+                        </div>
+                       
+                       {% endfor%}
+                    </div>
+                </div>
+            </section>
+            <!-- team end -->
+
+            <!-- pagination -->
+            <div class="container">
+                <div class="mil-background-grid mil-softened"></div>
+                <div class="mil-pagination mil-up">
+                    <div class="mil-nav-buttons">
+                        <div class="mil-slider-button mil-banner-prev">Prev</div>
+                        <div class="mil-slider-button mil-banner-next">Next</div>
+                    </div>
+                    <ul class="mil-page-numbers">
+                        <li class="mil-active"><a href="#.">01</a></li>
+                        <li><a href="#.">02</a></li>
+                        <li><a href="#.">...</a></li>
+                        <li><a href="#.">06</a></li>
+                    </ul>
+                </div>
+            </div>
+            <!-- pagination end -->
+
+            <!-- recruit 
+            <section>
+                <div class="container mil-p-120-30">
+                    <div class="mil-background-grid mil-softened"></div>
+                    <div class="row justify-content-between align-items-center flex-sm-row-reverse">
+                        <div class="col-lg-5">
+
+                            <div class="mil-mb-90">
+                                <span class="mil-suptitle mil-upper mil-up mil-mb-30">Your Future</span>
+                                <h2 class="mil-upper mil-up mil-mb-30">Interested in Working Together?</h2>
+                                <p class="mil-up mil-mb-30">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua quis ipsum suspendisse ultrices gravida.</p>
+                                <a href="contact.html" class="mil-button mil-upper mil-up">Sign up now</a>
+                            </div>
+
+                        </div>
+                        <div class="col-lg-6">
+
+                            <div class="mil-illustration mil-up mil-mb-90">
+                                <div class="mil-image-frame">
+                                    <img src="{% static 'img/photo/13.jpg' %}" alt="image" class="mil-scale" data-value-1="1" data-value-2="1.3">
+                                </div>
+                                <div class="mil-about-counter mil-center">
+                                    <div class="mil-avatar mil-mb-30">
+                                        <img src="{% static 'img/faces/2.jpg' %}" alt="face">
+                                    </div>
+                                    <h5 class="mil-upper mil-mb-10">Joe French</h5>
+                                    <p class="mil-text-sm mil-dark-soft">Recruit</p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+            end -->
+
+           <!-- footer -->
+           
+{% endblock content %} 

@@ -1,0 +1,139 @@
+{% extends '../base.html' %}
+{% load static %}
+
+{% block title %}Home{% endblock title %}
+
+
+{% block content %} 
+
+ <!-- content -->
+        <div id="content">
+
+            <!-- banner -->
+            <section class="mil-banner mil-banner-sm">
+                <img src="{{project.featured_image.url }}" class="mil-bg-img mil-scale" data-value-1=".4" data-value-2="1.4" alt="image" style="object-position: top">
+                <div class="mil-overlay"></div>
+                <div class="container">
+                    <div class="mil-background-grid mil-top-space"></div>
+                    <div class="mil-banner-content">
+                        <div class="mil-mb-90">
+                            <span class="mil-suptitle mil-upper mil-light mil-up mil-mb-30">Project Details</span>
+                            <h1 class="mil-light mil-upper mil-up mil-mb-30">{{project.category}} <br>Project</h1>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- banner end -->
+
+             <!-- description -->
+            <section>
+                <div class="container mil-p-120-90">
+                    <div class="mil-background-grid mil-softened"></div>
+                    <div class="row justify-content-between">
+                        <div class="col-lg-4">
+
+                            <div class="mil-mb-60">
+                                <span class="mil-suptitle mil-upper mil-up mil-mb-30">Overview</span>
+                                <h2 class="mil-upper mil-up mil-mb-30">{{project.name}} <br>{{project.location}}</h2>
+                            </div>
+
+                        </div>
+                        <div class="col-lg-7 mil-mt-suptitle-offset">
+
+                            <p class="mil-up mil-mb-30">{{project.description}}</p>
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- description end -->
+
+            <div class="container">
+                <div class="mil-divider-lg"></div>
+            </div>
+
+            <!-- info -->
+            <section>
+                <div class="container mil-p-120-60">
+                    <div class="mil-background-grid mil-softened"></div>
+                    <div class="mil-mb-90">
+                        <h2 class="mil-upper mil-up">Info Project</h2>
+                    </div>
+                    <div class="row mil-mb-30">
+                        <div class="col-lg-3">
+
+                            <h6 class="mil-upper mil-up mil-mb-30">Client</h6>
+                            <ul class="mil-list mil-dark mil-up mil-mb-60">
+                                <li>{{project.client}}</li>
+                            </ul>
+
+                        </div>
+                        <div class="col-lg-3">
+
+                            <h6 class="mil-upper mil-up mil-mb-30">Location</h6>
+                            <ul class="mil-list mil-dark mil-up mil-mb-60">
+                                <li>{{project.location}}</li>
+                            </ul>
+
+                        </div>
+                        <div class="col-lg-3">
+
+                            <h6 class="mil-upper mil-up mil-mb-30">Stage</h6>
+                            <ul class="mil-list mil-dark mil-up mil-mb-60">
+                                <li>{{project.status}}</li>
+                            </ul>
+
+                        </div>
+                        <div class="col-lg-3">
+
+                            <h6 class="mil-upper mil-up mil-mb-30">Project Facilities</h6>
+                            <ul class="mil-list mil-dark mil-up mil-mb-30">
+                             {% for facility in project.facilities.all %}
+                                <li>{{facility}}</li>
+
+                                {% endfor%}
+                               
+                            </ul>
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- info end -->
+
+            <!-- portfolio -->
+            <div class="mil-illustration-slider-frame mil-up">
+                <div class="swiper-container mil-illustration-slider">
+                    <div class="swiper-wrapper">
+                         {% for photo in project.projphoto.all %}
+                        <div class="swiper-slide">
+
+                            <div class="mil-illustration mil-fw-item" data-swiper-parallax-x="50" data-swiper-parallax-scale="1.3">
+                                <div class="mil-image-frame">
+                                    <img src="{{ photo.image.url}}" alt="image" style="object-position:center" height="500">
+                                </div>
+                            </div>
+
+                        </div>
+                       
+                        {% endfor %}
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="mil-illustration-slider-nav mil-up">
+                        <div class="mil-nav-buttons">
+                            <div class="mil-slider-button mil-illustration-prev">Prev</div>
+                            <div class="mil-slider-button mil-illustration-next">Next</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- portfolio end -->
+
+           
+            <div class="container">
+                <div class="mil-divider-lg"></div>
+            </div>
+
+{% endblock content %} 
+ 

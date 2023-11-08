@@ -1,0 +1,52 @@
+{% extends '../base.html' %}
+{% load static %}
+
+{% block title %}Home{% endblock title %}
+
+
+{% block content %} 
+
+ <!-- content -->
+        <div id="content">
+
+            <!-- team member -->
+            <section class="mil-soft-bg mil-team-member-wrapper">
+                <div class="container mil-p-0-120">
+                    <div class="mil-team-member-frame">
+                        <div class="mil-left-side">
+                            <div class="mil-member-portrait">
+                                <img src="{{team.picture.url}}" alt="portrait">
+                            </div>
+                        </div>
+                        <div class="mil-right-side">
+
+                            <div class="mil-p-30-30">
+                                <span class="mil-suptitle mil-upper mil-up mil-mb-30">About</span>
+                                <h3 class="mil-upper mil-up mil-mb-30">{{team.name}}</h3>
+                                <ul class="mil-list mil-dark mil-up mil-mb-30">
+                                    <li>{{team.designation}} MACRO ACRES LTD</li>
+                                    <li>Over {{team.yrs_of_experience}} years Experience</li>
+                                    <li>Phone: +(234) {{team.phone_number}}</li>
+                                </ul>
+
+                                <ul class="mil-hori-list mil-dark mil-up mil-mb-30">
+                                    <li><a href="{{team.facebook}}">Facebook</a></li>
+                                    <li><a href="{{team.twitter}}">Twitter</a></li>
+                                    <li><a href="{{team.instagram}}">Instagram</a></li>
+                                    <li><a href="{{team.linkedin}}">linkedIn</a></li>
+                                </ul>
+                                <div class="mil-divider-lg mil-up mil-mb-30"></div>
+                                 {% for para in team.teamText.all %}
+                                <p class="mil-up mil-text-sm mil-up mil-mb-30">{{para.paragraph}}</p>
+                               {% endfor%}
+                                <!-- <h2 class="mil-font-2 mil-thin mil-up"></h2> -->
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+            <!-- team member end -->
+
+{% endblock content %} 

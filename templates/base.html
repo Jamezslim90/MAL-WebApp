@@ -1,0 +1,214 @@
+{% load static  %}
+
+<html lang="en-US">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- bootstrap grid css -->
+    <link rel="stylesheet" href="{% static 'css/plugins/bootstrap-grid.css' %}">
+    <!-- font awesome css -->
+    <link rel="stylesheet" href="{% static 'css/plugins/font-awesome.min.css' %}">
+    <!-- swiper css -->
+    <link rel="stylesheet" href="{% static 'css/plugins/swiper.min.css' %}">
+    <!-- magnific css -->
+    <link rel="stylesheet" href="{% static 'css/plugins/magnific-popup.css' %}">
+    <!-- ruizarch css -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <!-- page name -->
+    <title>Macro Acres | Home</title>
+
+</head>
+
+<body>
+
+    <!-- wrapper -->
+    <div class="mil-wrapper">
+
+        <div class="mil-progress-track">
+            <div class="mil-progress"></div>
+        </div>
+
+        <!-- top bar -->
+        <div class="mil-top-panel">
+            <div class="container-fluid">
+                <div class="mil-top-panel-content">
+                    <a href="{% url 'index'%}" class="mil-logo">
+                        <img src="{% static 'img/logo/2.png' %}" alt="Logo" style="width: 130px;">
+                    </a>
+
+                    <div class="mil-navigation">
+                        <nav>
+                            <ul>
+                                <li class="mil-has-children ">
+                                    <a href="{% url 'index'%}">Macro Acres</a>
+                                    <ul>
+                                        <li><a href="{% url 'about'%}">About Us</a></li>
+                                        <li><a href="{% url 'videos'%}">Videos</a></li>
+                                    </ul>
+                                </li>
+                                <li class="mil-has-children">
+                                    <a href="{% url 'services'%}">Services</a>
+                                    <ul>
+                                        <li><a href="{% url 'services'%}">Our Services</a></li>
+                                    </ul>
+                                </li>
+                                <li class="mil-has-children">
+                                    <a href="{% url 'projects' %}">Projects</a>
+                                    <ul>
+                                        <li><a href="{% url 'projects' %}">Our Projects list</a></li>
+                                    </ul>
+                                </li>
+                                {% comment %} <li class="mil-has-children">
+                                    <a href="{% url 'products'%}">Products</a>
+                                    <ul>
+                                        <li><a href="{% url 'projects'%}">Our Products list</a></li>
+                                    </ul>
+                                </li>{% endcomment %}
+                                <li class="mil-has-children">
+                                    <a href="{% url 'team'%}">Team</a>
+                                    <ul>
+                                        <li><a href="{% url 'team'%}">Our Team</a></li>
+                                    </ul>
+                                </li> 
+                                <li><a href="{% url 'contact'%}">Contact Us</a></li>
+                               
+                            </ul>
+                        </nav>
+                    </div>
+
+                    <!-- right buttons -->
+                    <div class="mil-top-panel-buttons">
+                        <a href="contact.html" class="mil-button mil-sm">Start A Project</a>
+                        <div class="mil-menu-btn">
+                            <span></span>
+                        </div>
+                    </div>
+                    <!-- right buttons end -->
+
+                </div>
+
+            </div>
+        </div>
+        <!-- top bar end -->
+
+
+
+
+<div>
+ {% block content %}
+ {% endblock content %}
+</div>
+
+
+
+
+
+        <!-- footer -->
+        <footer class="mil-relative">
+                <img src="{% static 'img/photo/4.jpg' %}" class="mil-bg-img mil-parallax" alt="image" style="object-position: top;" data-value-1="-25%" data-value-2="23%">
+                <div class="mil-overlay"></div>
+                <div class="container mil-p-120-90">
+                    <div class="mil-background-grid"></div>
+                    <div class="row align-items-end">
+                        <div class="col-lg-8">
+                            <div class="row">
+                                <div class="col-12">
+
+                                    <div class="mil-footer-navigation mil-up mil-mb-90">
+                                        <nav>
+                                            <ul>
+                                                <li>
+                                                    <a href="{% url 'about'%}">About</a>
+                                                </li>
+                                                <li class="">
+                                                    <a href="{% url 'services'%}">Services</a>
+                                                </li>
+                                                <li>
+                                                    <a href="{% url 'projects'%}">Projects</a>
+                                                </li>
+                                                <li>
+                                                    <a href="{% url 'team'%}">Team</a>
+                                                </li>
+                                                <li>
+                                                    <a href="{% url 'contact'%}">Contact</a>
+                                                </li>
+                                            </ul>
+                                        </nav>
+                                    </div>
+
+                                </div>
+                                <div class="col-md-6 col-lg-6 col-xl-3">
+
+                                    <span class="mil-suptitle mil-light mil-upper mil-up mil-mb-30">Head Office</span>
+                                    <p class="mil-text-sm mil-up mil-light-soft mil-mb-30">Suite A001 Crowther Plaza Plot 1055 <br>Joseph Gomwalk Street, Gudu District, <br>Abuja, Nigeria,<br>(234) 0803 711 6721</p>
+
+                                </div>
+                                <div class="col-md-6 col-lg-6 col-xl-3">
+
+                                    <span class="mil-suptitle mil-light mil-upper mil-up mil-mb-30">Regional Office</span>
+                                    <p class="mil-text-sm mil-up mil-light-soft mil-mb-30">52B, Upper New Market Road<br>Onitsha Anambra, <br>Abuja, Nigeria,<br>(234) 08071803066</p>
+
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+
+                            <a href="{% url 'index'%}" class="mil-footer-logo mil-up mil-mb-30">
+                                <img src="{% static 'img/logo/2.png' %}" alt="Logo" style="width: 130px">
+                            </a>
+
+                        </div>
+
+                    </div>
+                </div>
+                <div class="container-fluid">
+
+                    <div class="mil-footer-bottom">
+                        <p class="mil-light-soft mil-mb-15">© 2023. All rights reserved.</p>
+                        <ul class="mil-light-soft mil-mb-15">
+                            <li><a href="#.">Facebook</a></li>
+                            <li><a href="#.">Twitter</a></li>
+                            <li><a href="#.">Instagram</a></li>
+                            <li><a href="#.">Youtube</a></li>
+                        </ul>
+                        <ul class="mil-light-soft mil-mb-15">
+                            <li><a href="#.">Our App</a></li>
+                            <li><a href="#.">Sitemap</a></li>
+                        </ul>
+                    </div>
+
+                </div>
+            </footer>
+            <!-- footer end -->
+
+        </div>
+        <!-- content -->
+    </div>
+    <!-- wrapper end -->
+
+    <!-- jQuery js -->
+    <script src="{% static 'js/plugins/jquery.min.js' %}"></script>
+    <!-- swiper js -->
+    <script src="{% static 'js/plugins/swiper.min.js' %}"></script>
+    <!-- gsap js -->
+    <script src="{% static 'js/plugins/gsap.min.js' %}"></script>
+    <!-- imagesloaded js -->
+    <script src="{% static 'js/plugins/imagesloaded.pkgd.js' %}"></script>
+    <!-- isotope js -->
+    <script src="{% static 'js/plugins/isotope.min.js' %}"></script>
+    <!-- scroll smoother -->
+    <script src="{% static 'js/plugins/smooth-scroll.js' %}"></script>
+    <!-- scroll trigger js -->
+    <script src="{% static 'js/plugins/ScrollTrigger.min.js' %}"></script>
+    <!-- magnific js -->
+    <script src="{% static 'js/plugins/magnific-popup.js' %}"></script>
+    <!-- ruizarch js -->
+    <script src="{% static 'js/main.js' %}"></script>
+
+</body>
+
+</html>

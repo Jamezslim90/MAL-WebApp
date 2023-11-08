@@ -1,0 +1,94 @@
+{% extends '../base.html' %}
+{% load static %}
+
+{% block title %}Home{% endblock title %}
+
+
+{% block content %}
+
+        <!-- content -->
+        <div id="content">
+
+            <!-- banner -->
+            <section class="mil-banner mil-banner-sm">
+                <img src="{% static 'img/covers/bristol-hotel-kaduna8.jpg' %}" class="mil-bg-img mil-scale" data-value-1=".4" data-value-2="1.4" alt="image" style="object-position: top">
+                <div class="mil-overlay"></div>
+                <div class="container">
+                    <div class="mil-background-grid mil-top-space"></div>
+                    <div class="mil-banner-content mil-center">
+                        <div class="mil-mb-90">
+                            <h1 class="mil-light mil-upper mil-mb-30">Videos</h1>
+                            <ul class="mil-breadcrumbs mil-center">
+                                <li><a href="home-1.html">Home</a></li>
+                                <li><a href="blog.html">Videos</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- banner end -->
+
+            <!-- blog -->
+            <section>
+                <div class="container mil-p-120-60">
+                    <div class="mil-background-grid mil-softened"></div>
+                    <div class="row justify-content-between">
+                        <div class="col-lg-7">
+                          
+                                <div class="mil-cover mil-long mil-up mil-mb-40">
+                                    <div style="padding:55% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/873829630?badge=0&amp;autopause=0&amp;quality_selector=1&amp;progress_bar=1&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="VFE PETROL FILLING STATION"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+                                </div>  
+
+                                <div class="mil-cover mil-long mil-up mil-mb-40">
+                                <div style="padding:55% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/873863751?badge=0&amp;autopause=0&amp;quality_selector=1&amp;progress_bar=1&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="KAFTAN TV HEAD QUARTERS"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+                                </div>  
+
+                                <div class="mil-cover mil-long mil-up mil-mb-40">
+                                <div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/873875141?badge=0&amp;autopause=0&amp;quality_selector=1&amp;progress_bar=1&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="JIKWOYI MULTI-PURPOSE MARKET"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+                                </div> 
+
+                        </div>
+                        <div class="col-lg-5">
+
+                            <div class="mil-sidebar-frame">
+                                <h6 class="mil-upper mil-up mil-mb-30">Email </h6>
+                                <ul class="mil-list mil-dark mil-up mil-mb-30">
+                                    <li class="mil-text-sm">macroacreslimited@gmail.com</li>
+                                </ul>
+
+                                <div class="mil-divider-lg mil-up mil-mb-30"></div>
+
+                                <div class="mil-sidebar-search mil-up mil-mb-30">
+                                    <input type="text" placeholder="Search in blog ...">
+                                    <button><img src="{% static 'img/icons/13.svg' %}" alt="search"></button>
+                                </div>
+
+                                <div class="mil-divider-lg mil-up mil-mb-30"></div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- blog end -->
+
+            <!-- pagination -->
+            <div class="container mil-p-0-120">
+                <div class="mil-background-grid mil-softened"></div>
+                <div class="mil-pagination mil-up">
+                    <div class="mil-nav-buttons">
+                        <div class="mil-slider-button mil-banner-prev">Prev</div>
+                        <div class="mil-slider-button mil-banner-next">Next</div>
+                    </div>
+                    <ul class="mil-page-numbers">
+                        <li class="mil-active"><a href="#.">01</a></li>
+                        <li><a href="#.">02</a></li>
+                        <li><a href="#.">...</a></li>
+                        <li><a href="#.">06</a></li>
+                    </ul>
+                </div>
+            </div>
+            <!-- pagination end -->
+
+{% endblock content %}
