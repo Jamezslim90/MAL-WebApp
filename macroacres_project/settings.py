@@ -1,7 +1,9 @@
 from pathlib import Path
-import os 
+import os
 
 
+
+import helpers.cloudflare.settings
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -28,7 +30,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    
+
     'pages.apps.PagesConfig',
     'projects',
     'team',
@@ -148,6 +150,19 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media') # new
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
+
+STORAGES = {
+    "default": {
+        "BACKEND": "helpers.cloudflare.storages.MediaFileStorage",
+        "OPTIONS": helpers.cloudflare.settings.CLOUDFLARE_R2_CONFIG_OPTIONS,
+    },
+    "staticfiles": {
+        "BACKEND": "helpers.cloudflare.storages.StaticFileStorage",
+        "OPTIONS": helpers.cloudflare.settings.CLOUDFLARE_R2_CONFIG_OPTIONS,
+    },
+}
+
+
 JAZZMIN_SETTINGS = {
 
         "site_title": "Macro Acres Ltd",
@@ -170,11 +185,12 @@ JAZZMIN_SETTINGS = {
 
 # UserUpload images Settings
 
-DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+# DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+# AWS_ACCESS_KEY_ID = 'AKIA5WSB2IR7BNA3LW7X'
+# AWS_SECRET_ACCESS_KEY = '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'
+# AWS_STORAGE_BUCKET_NAME = 'django-cat-bucket'
+# AWS_QUERYSTRING_AUTH = False
+# AWS_SECURITY_TOKEN_IGNORE_ENVIRONMENT = True
+# AWS_IGNORE_ENVIRONMENT_CREDENTIALS = True
 
-AWS_ACCESS_KEY_ID = 'AKIA5WSB2IR7BNA3LW7X'
-AWS_SECRET_ACCESS_KEY = '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'
-AWS_STORAGE_BUCKET_NAME = 'django-cat-bucket'
-AWS_QUERYSTRING_AUTH = False
-AWS_SECURITY_TOKEN_IGNORE_ENVIRONMENT = True
-AWS_IGNORE_ENVIRONMENT_CREDENTIALS = True
+

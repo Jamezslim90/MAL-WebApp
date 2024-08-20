@@ -12,7 +12,7 @@ from django.urls import reverse
 
 class ProjectFacility (models.Model):
     """Model representing a project facilities."""
-    
+
     name = models.CharField(max_length=200, help_text='Enter a product feature (e.g. Swimming-pool CCTV Solar-power)')
 
     class meta :
@@ -26,23 +26,23 @@ class ProjectFacility (models.Model):
 
 
 class Category (models.Model):
-    name =  models.CharField( max_length=50, default='Residential', help_text='Project purpose',)  
-          
+    name =  models.CharField( max_length=50, default='Residential', help_text='Project purpose',)
+
     class meta :
-            ordering = ['-name'] 
+            ordering = ['-name']
             verbose_name = 'Categories'
-            
+
     def __str__(self):
         """String for representing the Model object."""
         return self.name
-  
-  
-        
+
+
+
 class Project (models.Model):
         """Model representing a project."""
 
         name = models.CharField(max_length=250)
-       
+
 
         description = models.TextField(max_length=1000, help_text='Enter a brief description of the project')
         location = models.CharField(max_length=300)
@@ -56,7 +56,7 @@ class Project (models.Model):
 
         PROJECT_STATUS = (
         ('Not started', 'Not started'),
-        ('Inprogess', 'Inprogress'),
+        ('Inprogress', 'Inprogress'),
         ('Completed', 'Completed'),
     )
 
@@ -70,14 +70,14 @@ class Project (models.Model):
 
 
         class meta :
-            ordering = ['-name'] 
+            ordering = ['-name']
             verbose_name = 'Projects'
 
-    
+
         def __str__(self):
             """String for representing the Model object."""
             return self.name
-        
+
         def get_absolute_url(self):
 
             """Returns the URL to access a detail record for this project."""
@@ -92,10 +92,10 @@ class ProjectPhoto (models.Model):
     image= models.ImageField(upload_to='images/')
 
     class meta :
-            ordering = ['-image'] 
+            ordering = ['-image']
             verbose_name = 'ProjPhotos'
 
-    
+
     # def __str__(self):
     #         """String for representing the Model object."""
     #         return self.image
