@@ -11,7 +11,7 @@ class DefaultACLMixin:
     # https://docs.aws.amazon.com/AmazonS3/latest/userguide/acl-overview.html#canned-acl
     """
 
-    default_acl = "public-read-write"
+    default_acl = "public-read"
     CANNED_ACL_OPTIONS = [
         "private",
         "public-read",

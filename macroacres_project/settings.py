@@ -2,7 +2,7 @@ from pathlib import Path
 import os
 
 
-
+from decouple import config
 import helpers.cloudflare.settings
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -23,7 +23,7 @@ ALLOWED_HOSTS = ["*",]
 # Application definition
 
 INSTALLED_APPS = [
-    'jazzmin',
+    # 'jazzmin',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -35,13 +35,13 @@ INSTALLED_APPS = [
     'projects',
     'team',
     'products',
-    'easy_thumbnails',
-    'django_s3_storage'
+    # 'easy_thumbnails',
+    # 'django_s3_storage'
 ]
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
-     "whitenoise.middleware.WhiteNoiseMiddleware",
+    # "whitenoise.middleware.WhiteNoiseMiddleware",
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -135,14 +135,14 @@ USE_TZ = True
 STATIC_URL = 'static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
-# STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_build', 'static')
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_build', 'static')
 
-STATICFILES_STORAGE = "whitenoise.storage.CompressedStaticFilesStorage"
+# STATICFILES_STORAGE = "whitenoise.storage.CompressedStaticFilesStorage"
 
-WHITENOISE_MANIFEST_STRICT = False
+# WHITENOISE_MANIFEST_STRICT = False
 
-MEDIA_URL = '/media/' # new
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media') # new
+# MEDIA_URL = '/media/' # new
+# MEDIA_ROOT = os.path.join(BASE_DIR, 'media') # new
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
@@ -163,23 +163,23 @@ STORAGES = {
 }
 
 
-JAZZMIN_SETTINGS = {
+# JAZZMIN_SETTINGS = {
 
-        "site_title": "Macro Acres Ltd",
-        "site_header": "Macro Acres Ltd",
-        "site_brand": "Macro Acres Admin",
-        # "site_logo": "img/logo/ma-logo.png",
-        "login_logo": "img/logo/ma-logo.png",
-        "site_icon": "img/logo/ma-logo.png",
-        # Welcome text on the login screen
-        "welcome_sign": "Welcome to Macro Acres Admin",
+#         "site_title": "Macro Acres Ltd",
+#         "site_header": "Macro Acres Ltd",
+#         "site_brand": "Macro Acres Admin",
+#         # "site_logo": "img/logo/ma-logo.png",
+#         "login_logo": "img/logo/ma-logo.png",
+#         "site_icon": "img/logo/ma-logo.png",
+#         # Welcome text on the login screen
+#         "welcome_sign": "Welcome to Macro Acres Admin",
 
-        # Copyright on the footer
-        "copyright": "Macro Acres Ltd",
+#         # Copyright on the footer
+#         "copyright": "Macro Acres Ltd",
 
-        # The model admin to search from the search bar, search bar omitted if excluded
-        "search_model": "auth.User",
-}
+#         # The model admin to search from the search bar, search bar omitted if excluded
+#         "search_model": "auth.User",
+# }
 
 
 
