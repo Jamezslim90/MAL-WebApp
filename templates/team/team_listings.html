@@ -4,7 +4,7 @@
 {% block title %}Home{% endblock title %}
 
 
-{% block content %} 
+{% block content %}
 
 
         <!-- content -->
@@ -20,8 +20,8 @@
                         <div class="mil-mb-90">
                             <h1 class="mil-light mil-upper mil-mb-30">Management</h1>
                             <ul class="mil-breadcrumbs mil-center">
-                                <li><a href="home-1.html">Home</a></li>
-                                <li><a href="about.html">Team</a></li>
+                                <li><a href="{% url 'index' %}">Home</a></li>
+                                <li><a href="{% url 'team' %}">Team</a></li>
                             </ul>
                         </div>
                     </div>
@@ -34,7 +34,7 @@
                 <div class="container mil-p-120-60">
                     <div class="mil-background-grid mil-softened"></div>
                     <div class="mil-center">
-                        <p class="mil-text-lg mil-up mil-mb-90">TEAM to us means Together Everyone Achieves More. The backbone of our success lies in the passion and expertise of our Professionals combined with the skills and dedication of our Workforce. 
+                        <p class="mil-text-lg mil-up mil-mb-90">TEAM to us means Together Everyone Achieves More. The backbone of our success lies in the passion and expertise of our Professionals combined with the skills and dedication of our Workforce.
 </p>
                     </div>
                     <!-- filter -->
@@ -60,7 +60,7 @@
                                 <p class="mil-dark-soft">{{team.designation}}</p>
                             </a>
                         </div>
-                       
+
                        {% endfor%}
                     </div>
                 </div>
@@ -85,7 +85,7 @@
             </div>
             <!-- pagination end -->
 
-            <!-- recruit 
+            <!-- recruit
             <section>
                 <div class="container mil-p-120-30">
                     <div class="mil-background-grid mil-softened"></div>
@@ -122,5 +122,5 @@
             end -->
 
            <!-- footer -->
-           
-{% endblock content %} 
+
+{% endblock content %}

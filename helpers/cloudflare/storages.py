@@ -1,5 +1,4 @@
 from storages.backends.s3 import S3Storage
-
 import helpers.storages.mixins as mixins
 
 

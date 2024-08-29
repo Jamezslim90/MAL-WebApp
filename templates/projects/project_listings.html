@@ -4,8 +4,8 @@
 {% block title %}Home{% endblock title %}
 
 
-{% block content %} 
- 
+{% block content %}
+
  <!-- content -->
         <div id="content">
 
@@ -19,8 +19,8 @@
                         <div class="mil-mb-90">
                             <h1 class="mil-light mil-upper mil-mb-30">Projects</h1>
                             <ul class="mil-breadcrumbs mil-center">
-                                <li><a href="index.html">Home</a></li>
-                                <li><a href="about.html">Our works</a></li>
+                                <li><a href="{% url 'index' %}">Home</a></li>
+                                <li><a href="{% url 'projects' %}">Our works</a></li>
                             </ul>
                         </div>
                     </div>
@@ -68,7 +68,7 @@
                                 {% for project in project_list %}
 
                                 <div class="mil-grid-item sustainable2">
-                                 
+
                                     <a href="{% url 'project_detail' project.pk %}" class="mil-portfolio-item-2 mil-square-item mil-mb-30">
                                         <img src="{{project.featured_image.url }}" alt="cover">
                                         <div class="mil-project-descr">
@@ -82,7 +82,7 @@
 
                                 {% endfor %}
 
-                               
+
                                 {% comment %} {% for comm_project in commercial %}
 
                                 <div class="mil-grid-item architecture">

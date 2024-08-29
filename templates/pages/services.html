@@ -19,8 +19,8 @@
                         <div class="mil-mb-90">
                             <h1 class="mil-light mil-upper mil-mb-30">Our Services</h1>
                             <ul class="mil-breadcrumbs mil-center">
-                                <li><a href="index.html">Home</a></li>
-                                <li><a href="about.html">Services</a></li>
+                                <li><a href="{% url 'index' %}">Home</a></li>
+                                <li><a href="{% url 'services' %}">Services</a></li>
                             </ul>
                         </div>
                     </div>
@@ -51,7 +51,7 @@
                     <div class="row">
                         <div class="col-lg-4 mil-up">
 
-                            <a href="services.html" class="mil-service-card mil-mb-30">
+                            <a href="{% url 'services' %}" class="mil-service-card mil-mb-30">
                                 <div class="mil-card-number">01.</div>
                                 <div class="mil-center">
                                     <div class="mil-icon mil-icon-lg mil-mb-30">
@@ -69,7 +69,7 @@
                         </div>
                         <div class="col-lg-4 mil-up">
 
-                            <a href="services.html" class="mil-service-card mil-mb-30">
+                            <a href="{% url 'services' %}" class="mil-service-card mil-mb-30">
                                 <div class="mil-card-number">02.</div>
                                 <div class="mil-center">
                                     <div class="mil-icon mil-icon-lg mil-mb-30">
@@ -87,7 +87,7 @@
                         </div>
                         <div class="col-lg-4 mil-up">
 
-                            <a href="services.html" class="mil-service-card mil-mb-30">
+                            <a href="{% url 'services' %}" class="mil-service-card mil-mb-30">
                                 <div class="mil-card-number">03.</div>
                                 <div class="mil-center">
                                     <div class="mil-icon mil-icon-lg mil-mb-30">
@@ -105,7 +105,7 @@
                         </div>
                         <div class="col-lg-4 mil-up">
 
-                            <a href="services.html" class="mil-service-card mil-mb-30">
+                            <a href="{% url 'services' %}" class="mil-service-card mil-mb-30">
                                 <div class="mil-card-number">04.</div>
                                 <div class="mil-center">
                                     <div class="mil-icon mil-icon-lg mil-mb-30">
@@ -123,7 +123,7 @@
                         </div>
                         <div class="col-lg-4 mil-up">
 
-                            <a href="services.html" class="mil-service-card mil-mb-30">
+                            <a href="{% url 'services' %}" class="mil-service-card mil-mb-30">
                                 <div class="mil-card-number">05.</div>
                                 <div class="mil-center">
                                     <div class="mil-icon mil-icon-lg mil-mb-30">
@@ -141,7 +141,7 @@
                         </div>
                         <div class="col-lg-4 mil-up">
 
-                            <a href="services.html" class="mil-service-card mil-mb-30">
+                            <a href="{% url 'services' %}" class="mil-service-card mil-mb-30">
                                 <div class="mil-card-number">05.</div>
                                 <div class="mil-center">
                                     <div class="mil-icon mil-icon-lg mil-mb-30">
@@ -241,7 +241,7 @@
                         </div>
                         <div class="col-lg-3 mil-mt-suptitle-offset">
                             <div class="mil-adaptive-right mil-up">
-                                <a href="contact.html" class="mil-button">Let's Talk Now</a>
+                                <a href="{% url 'contact' %}" class="mil-button">Let's Talk Now</a>
                             </div>
                         </div>
                     </div>
@@ -249,5 +249,5 @@
             </section>
             <!-- call to action end -->
 
-            
+
 {% endblock content %}
